@@ -26,7 +26,7 @@ namespace Stm32AutoComplete
         }
         //事件输出
         public event KeyEventHandler KeyUpEvent;
-
+        public event KeyEventHandler KeyDownEvent;
         //委托 
         public delegate int HookProc(int nCode, int wParam, IntPtr lParam);
         static int hHook = 0;
@@ -88,8 +88,16 @@ namespace Stm32AutoComplete
                     //Keys keyData = (Keys)MyKeyboardHookStruct.vkCode;
                     //if (keyData == Keys.Up)
                     //{
-                    KeyEventArgs e = new KeyEventArgs(KeyData);//绑定事件
-                    KeyUpEvent(this, e);
+                    if (kbh.flags == 0)
+                    {
+                        KeyEventArgs e = new KeyEventArgs(KeyData);//绑定事件
+                        KeyDownEvent(this, e);
+                    }
+                    else
+                    {
+                        KeyEventArgs e = new KeyEventArgs(KeyData);//绑定事件
+                        KeyUpEvent(this, e);
+                    }
                     //MessageBox.Show("捕捉到了按键释放");
                     //}
                 }
