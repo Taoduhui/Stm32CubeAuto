@@ -18,3 +18,4 @@ H:\source\repos\Stm32AutoComplete\Stm32AutoComplete\obj\Release\Stm32AutoComplet
 H:\source\repos\Stm32AutoComplete\Stm32AutoComplete\obj\Release\Stm32AutoComplete.application
 H:\source\repos\Stm32AutoComplete\Stm32AutoComplete\obj\Release\Stm32AutoComplete.exe
 H:\source\repos\Stm32AutoComplete\Stm32AutoComplete\obj\Release\Stm32AutoComplete.pdb
+H:\source\repos\Stm32AutoComplete\Stm32AutoComplete\obj\Release\Stm32AutoComplete.csproj.AssemblyReference.cache

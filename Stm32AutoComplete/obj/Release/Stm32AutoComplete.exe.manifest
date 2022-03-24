@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stm32AutoComplete.exe" size="217056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stm32AutoComplete.exe" size="217568">
       <assemblyIdentity name="Stm32AutoComplete" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8Fd6I7STD3BP5H5D9NZ5OSuJD2JTKvJ8YvTrKwVGtLE=</dsig:DigestValue>
+        <dsig:DigestValue>z+vSIf96O/ux8BCYQ48j6KfzxS6ZBslEMp/HjyZU+es=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

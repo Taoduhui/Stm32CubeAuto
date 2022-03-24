@@ -34,15 +34,32 @@ namespace Stm32AutoComplete
             InitializeComponent();
         }
 
+        bool IsInQueue = false;
+        int InputCounter = 3;
 
         private void hook_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (ActiveKey.Contains(e.KeyCode))
             {
-                MoniAction.Keyboard.Press(Key.LeftAlt);
-                MoniAction.Keyboard.Press(Key.OemQuestion);
-                MoniAction.Keyboard.Release(Key.OemQuestion);
-                MoniAction.Keyboard.Release(Key.LeftAlt);
+                InputCounter = 3;
+                if (!IsInQueue)
+                {
+                    Task.Run(() =>
+                    {
+                        IsInQueue = true;
+                        while (InputCounter >0)
+                        {
+                            Thread.Sleep(100);
+                            InputCounter--;
+                        }
+                        MoniAction.Keyboard.Press(Key.LeftAlt);
+                        MoniAction.Keyboard.Press(Key.OemQuestion);
+                        MoniAction.Keyboard.Release(Key.OemQuestion);
+                        MoniAction.Keyboard.Release(Key.LeftAlt);
+                        IsInQueue = false;
+                    });
+
+                }
             }
         }
 
