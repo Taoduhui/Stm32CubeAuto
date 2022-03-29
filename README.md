@@ -1,5 +1,8 @@
 # Stm32CubeAuto
+
 Stm32Cubeide Auto Completion Tool
+
+适用于所有Eclipse派生的嵌入式IDE
 
 Release https://github.com/Taoduhui/Stm32CubeAuto/releases/latest
 
